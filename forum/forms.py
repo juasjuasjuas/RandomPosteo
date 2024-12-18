@@ -20,14 +20,14 @@ class UserPostForm(forms.ModelForm):
         fields = ['title', 'description']
 
 class AnswerForm(forms.ModelForm):
-
     content = forms.CharField(label="", widget=forms.Textarea(attrs={
-        'class':'form-control form-control-style-3',
-        'placeholder':'Write your answer...',
-        'rows':'8',
-        'cols':'50',
+        'class': 'form-control form-control-style-3',
+        'placeholder': 'Write your answer...',
+        'rows': '8',
+        'cols': '50',
     }))
+    image = forms.ImageField(label="Image", required=False)  # Add ImageField
 
     class Meta:
         model = Answer
-        fields = ['content',]
+        fields = ['content', 'image']

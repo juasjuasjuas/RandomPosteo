@@ -50,24 +50,27 @@ def userPost(request):
 def postTopic(request, pk):
     post_topic = get_object_or_404(UserPost, pk=pk)
 
-    # Count Post View only for authenticated users
     if request.user.is_authenticated:
         TopicView.objects.get_or_create(user=request.user, user_post=post_topic)
 
     answers = Answer.objects.filter(user_post=post_topic)
-    answer_form = AnswerForm() # Initialize form outside the POST check
+    answer_form = AnswerForm()
 
-    if request.method == "POST" and request.user.is_authenticated: # Check if POST and user is logged in
-        answer_form = AnswerForm(request.POST)
+    if request.method == "POST" and request.user.is_authenticated:
+        answer_form = AnswerForm(request.POST, request.FILES) # Include request.FILES
         if answer_form.is_valid():
-            content = request.POST.get('content')
-            Answer.objects.create(user_post=post_topic, user=request.user, content=content)
+            answer = answer_form.save(commit=False) # Don't save immediately
+            answer.user_post = post_topic
+            answer.user = request.user
+            answer.save() # Now save
             return HttpResponseRedirect(post_topic.get_absolute_url())
-        # Handle invalid form if needed
+        else:
+            for error in answer_form.errors:
+                messages.error(request, answer_form.errors[error])
+            return redirect(request.META.get('HTTP_REFERER'))
     elif request.method == "POST" and not request.user.is_authenticated:
         messages.error(request, "You must be logged in to post a response.")
-        return redirect('login') # Redirect to login page
-        
+        return redirect('login')
 
     context = {
         'topic': post_topic,
