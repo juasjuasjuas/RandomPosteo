@@ -5,6 +5,9 @@ from django.db.models import Count, Q
 from django.contrib.auth.decorators import login_required
 # importing messages
 from django.contrib import messages
+import os
+import uuid
+from django.conf import settings
 
 # Model Forms.
 from .forms import UserPostForm, AnswerForm
@@ -50,40 +53,39 @@ def userPost(request):
 
 def postTopic(request, pk):
     post_topic = get_object_or_404(UserPost, pk=pk)
-
-    if request.user.is_authenticated:
-        TopicView.objects.get_or_create(user=request.user, user_post=post_topic)
-
     answers = Answer.objects.filter(user_post=post_topic)
     answer_form = AnswerForm()
-    image_form = AnswerImageForm()  # Initialize ImageForm
 
     if request.method == "POST" and request.user.is_authenticated:
         answer_form = AnswerForm(request.POST)
-        image_form = AnswerImageForm(request.POST, request.FILES)  # Handle uploaded image
 
-        if answer_form.is_valid() and image_form.is_valid():
+        if answer_form.is_valid():
             content = answer_form.cleaned_data['content']
             image_path = None
 
-            if image_form.cleaned_data['image']:
-                image_file = image_form.cleaned_data['image']
+            if request.FILES.get('image'):  # Check if 'image' is in request.FILES
+                image_file = request.FILES['image']
                 file_extension = os.path.splitext(image_file.name)[1]
-                unique_filename = str(uuid.uuid4()) + file_extension  # Generate unique name
-                image_path = os.path.join(settings.MEDIA_ROOT, unique_filename)
-
-                with open(image_path, 'wb+') as destination:
-                    for chunk in image_file.chunks():
-                        destination.write(chunk)
+                unique_filename = str(uuid.uuid4()) + file_extension
+                image_path = os.path.join(settings.MEDIA_ROOT, 'profile_images', unique_filename) #saves in the profile image folder
+                try:
+                    with open(image_path, 'wb+') as destination:
+                        for chunk in image_file.chunks():
+                            destination.write(chunk)
+                except OSError as e:
+                    messages.error(request, f"Error saving image: {e}")
+                    return redirect(request.META.get('HTTP_REFERER')) # Redirect back with error
 
             answer = Answer.objects.create(user_post=post_topic, user=request.user, content=content, image_path=image_path)
             return HttpResponseRedirect(post_topic.get_absolute_url())
+
         else:
-            for error in answer_form.errors:
-                messages.error(request, answer_form.errors[error])
-            for error in image_form.errors:
-                messages.error(request, image_form.errors[error])
+            for error, error_list in answer_form.errors.items():
+                for message in error_list:
+                    messages.error(request, f"{error}: {message}")
             return redirect(request.META.get('HTTP_REFERER'))
+            
+
     elif request.method == "POST" and not request.user.is_authenticated:
         messages.error(request, "You must be logged in to post a response.")
         return redirect('login')
@@ -92,9 +94,10 @@ def postTopic(request, pk):
         'topic': post_topic,
         'answers': answers,
         'answer_form': answer_form,
-        'image_form': image_form,  # Add image form to context
     }
     return render(request, 'topic-detail.html', context)
+
+
 
 
 @login_required(login_url='login')
