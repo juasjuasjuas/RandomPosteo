@@ -67,16 +67,17 @@ def postTopic(request, pk):
                 image_file = request.FILES['image']
                 file_extension = os.path.splitext(image_file.name)[1]
                 unique_filename = str(uuid.uuid4()) + file_extension
-                image_path = os.path.join(settings.MEDIA_ROOT, 'profile_images', unique_filename) #saves in the profile image folder
+                image_path = os.path.join(settings.MEDIA_ROOT, 'profile_images', unique_filename)
+
                 try:
                     with open(image_path, 'wb+') as destination:
                         for chunk in image_file.chunks():
                             destination.write(chunk)
                 except OSError as e:
                     messages.error(request, f"Error saving image: {e}")
-                    return redirect(request.META.get('HTTP_REFERER')) # Redirect back with error
+                    return redirect(request.META.get('HTTP_REFERER'))
 
-            answer = Answer.objects.create(user_post=post_topic, user=request.user, content=content, image_path=image_path)
+            Answer.objects.create(user_post=post_topic, user=request.user, content=content, image_path=image_path)
             return HttpResponseRedirect(post_topic.get_absolute_url())
 
         else:
@@ -84,7 +85,6 @@ def postTopic(request, pk):
                 for message in error_list:
                     messages.error(request, f"{error}: {message}")
             return redirect(request.META.get('HTTP_REFERER'))
-            
 
     elif request.method == "POST" and not request.user.is_authenticated:
         messages.error(request, "You must be logged in to post a response.")
@@ -96,7 +96,6 @@ def postTopic(request, pk):
         'answer_form': answer_form,
     }
     return render(request, 'topic-detail.html', context)
-
 
 
 
