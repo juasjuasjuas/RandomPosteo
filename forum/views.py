@@ -61,9 +61,9 @@ def postTopic(request, pk):
 
         if answer_form.is_valid():
             content = answer_form.cleaned_data['content']
-            image_path = None
+            author = request.user.author #get the author instance
 
-            if request.FILES.get('image'):  # Check if 'image' is in request.FILES
+            if request.FILES.get('image'):
                 image_file = request.FILES['image']
                 file_extension = os.path.splitext(image_file.name)[1]
                 unique_filename = str(uuid.uuid4()) + file_extension
@@ -73,11 +73,15 @@ def postTopic(request, pk):
                     with open(image_path, 'wb+') as destination:
                         for chunk in image_file.chunks():
                             destination.write(chunk)
+                    
+                    author.profile_pic = 'profile_images/'+ unique_filename #update the author profile pic
+                    author.save() #save the author
+                    
                 except OSError as e:
                     messages.error(request, f"Error saving image: {e}")
                     return redirect(request.META.get('HTTP_REFERER'))
 
-            Answer.objects.create(user_post=post_topic, user=request.user, content=content, image_path=image_path)
+            Answer.objects.create(user_post=post_topic, user=request.user, content=content) #create the answer without the image_path
             return HttpResponseRedirect(post_topic.get_absolute_url())
 
         else:
