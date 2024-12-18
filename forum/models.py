@@ -39,10 +39,10 @@ class UserPost(models.Model):
         return TopicView.objects.filter(user_post=self).count()
 
 class Answer(models.Model):
-    user_post = models.ForeignKey('forum.UserPost', on_delete=models.CASCADE)  # Added app label
+    user_post = models.ForeignKey('forum.UserPost', on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    content = models.TextField(max_length=500, blank=True)  # Made content optional
-    image = models.ImageField(upload_to='answer_images/', blank=True, null=True)  # Added ImageField
+    content = models.TextField(max_length=500, blank=True)
+    image = models.ImageField(upload_to='answer_images/', blank=True, null=True)  # Corrected upload_to
     date_created = models.DateTimeField(auto_now_add=True, null=True)
     upvotes = models.ManyToManyField(User, blank=True, related_name='upvotes')
     downvotes = models.ManyToManyField(User, blank=True, related_name='downvotes')
