@@ -48,33 +48,31 @@ def userPost(request):
 
 #@login_required(login_url='login')
 def postTopic(request, pk):
-    # Get specific user post by id.
     post_topic = get_object_or_404(UserPost, pk=pk)
 
     # Count Post View only for authenticated users
     if request.user.is_authenticated:
         TopicView.objects.get_or_create(user=request.user, user_post=post_topic)
 
-    # Get all answers of a specific post.
-    answers = Answer.objects.filter(user_post = post_topic)
+    answers = Answer.objects.filter(user_post=post_topic)
+    answer_form = AnswerForm() # Initialize form outside the POST check
 
-    # Answer form.
-    answer_form = AnswerForm(request.POST or None)
-    if request.method == "POST":
+    if request.method == "POST" and request.user.is_authenticated: # Check if POST and user is logged in
+        answer_form = AnswerForm(request.POST)
         if answer_form.is_valid():
             content = request.POST.get('content')
-            # passing User Id & User Post Id to DB
-            ans = Answer.objects.create(user_post=post_topic, user=request.user, content=content)
-            ans.save()
+            Answer.objects.create(user_post=post_topic, user=request.user, content=content)
             return HttpResponseRedirect(post_topic.get_absolute_url())
-    else:
-        answer_form = AnswerForm()
-    
-    context = {
-        'topic':post_topic,
-        'answers':answers,
-        'answer_form':answer_form,
+        # Handle invalid form if needed
+    elif request.method == "POST" and not request.user.is_authenticated:
+        messages.error(request, "You must be logged in to post a response.")
+        return redirect('login') # Redirect to login page
         
+
+    context = {
+        'topic': post_topic,
+        'answers': answers,
+        'answer_form': answer_form,
     }
     return render(request, 'topic-detail.html', context)
 
