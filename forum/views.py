@@ -51,41 +51,16 @@ def userPost(request):
 #@login_required(login_url='login')
 def postTopic(request, pk):
     post_topic = get_object_or_404(UserPost, pk=pk)
-
-    if request.user.is_authenticated:
-        TopicView.objects.get_or_create(user=request.user, user_post=post_topic)
-
     answers = Answer.objects.filter(user_post=post_topic)
     answer_form = AnswerForm()
 
     if request.method == "POST" and request.user.is_authenticated:
-        answer_form = AnswerForm(request.POST, request.FILES)  # Include request.FILES
-
+        answer_form = AnswerForm(request.POST, request.FILES)
         if answer_form.is_valid():
-            content = answer_form.cleaned_data['content']
-            image_path = None
-
-            if request.FILES.get('image'):  # Check if 'image' is in request.FILES
-                image_file = request.FILES['image']
-                file_extension = os.path.splitext(image_file.name)[1]
-                unique_filename = str(uuid.uuid4()) + file_extension
-                image_path = os.path.join(settings.MEDIA_ROOT, 'answer_images/', unique_filename)  # Specify upload path
-
-                try:
-                    with open(image_path, 'wb+') as destination:
-                        for chunk in image_file.chunks():
-                            destination.write(chunk)
-                except OSError as e:
-                    messages.error(request, f"Error saving image: {e}")
-                    return redirect(request.META.get('HTTP_REFERER'))
-
-            answer = answer_form.save(commit=False)  # Don't save immediately
+            answer = answer_form.save(commit=False)  # Very important: commit=False
             answer.user_post = post_topic
             answer.user = request.user
-            answer.content = content  # Set content after form validation
-            if image_path:
-                answer.image = image_path
-            answer.save()  # Now save
+            answer.save()  # Now save the object
 
             return HttpResponseRedirect(post_topic.get_absolute_url())
         else:
