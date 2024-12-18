@@ -46,7 +46,7 @@ def userPost(request):
     context = {'form':form}
     return render(request, 'user-post.html', context)
 
-@login_required(login_url='login')
+#@login_required(login_url='login')
 def postTopic(request, pk):
     # Get specific user post by id.
     post_topic = get_object_or_404(UserPost, pk=pk)
