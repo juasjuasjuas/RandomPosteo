@@ -8,7 +8,6 @@ from django.contrib import messages
 import os
 import uuid
 from django.conf import settings
-
 # Model Forms.
 from .forms import UserPostForm, AnswerForm
 # String module
@@ -50,9 +49,12 @@ def userPost(request):
     return render(request, 'user-post.html', context)
 
 #@login_required(login_url='login')
-
 def postTopic(request, pk):
     post_topic = get_object_or_404(UserPost, pk=pk)
+
+    if request.user.is_authenticated:
+        TopicView.objects.get_or_create(user=request.user, user_post=post_topic)
+
     answers = Answer.objects.filter(user_post=post_topic)
     answer_form = AnswerForm()
 
@@ -61,35 +63,29 @@ def postTopic(request, pk):
 
         if answer_form.is_valid():
             content = answer_form.cleaned_data['content']
-            author = request.user.author #get the author instance
+            image_path = None
 
-            if request.FILES.get('image'):
+            if request.FILES.get('image'):  # Check if 'image' is in request.FILES
                 image_file = request.FILES['image']
                 file_extension = os.path.splitext(image_file.name)[1]
-                unique_filename = str(uuid.uuid4()) + file_extension
-                image_path = os.path.join(settings.MEDIA_ROOT, 'profile_images', unique_filename)
+                unique_filename = str(uuid.uuid4()) + file_extension # Generate unique name
+                image_path = os.path.join(settings.MEDIA_ROOT, 'profile_images', unique_filename)  # Save in profile_images folder
 
                 try:
                     with open(image_path, 'wb+') as destination:
                         for chunk in image_file.chunks():
                             destination.write(chunk)
-                    
-                    author.profile_pic = 'profile_images/'+ unique_filename #update the author profile pic
-                    author.save() #save the author
-                    
                 except OSError as e:
                     messages.error(request, f"Error saving image: {e}")
                     return redirect(request.META.get('HTTP_REFERER'))
 
-            Answer.objects.create(user_post=post_topic, user=request.user, content=content) #create the answer without the image_path
+            answer = Answer.objects.create(user_post=post_topic, user=request.user, content=content, image_path=image_path)
             return HttpResponseRedirect(post_topic.get_absolute_url())
 
         else:
-            for error, error_list in answer_form.errors.items():
-                for message in error_list:
-                    messages.error(request, f"{error}: {message}")
+            for error in answer_form.errors:
+                messages.error(request, answer_form.errors[error])
             return redirect(request.META.get('HTTP_REFERER'))
-
     elif request.method == "POST" and not request.user.is_authenticated:
         messages.error(request, "You must be logged in to post a response.")
         return redirect('login')
@@ -100,8 +96,6 @@ def postTopic(request, pk):
         'answer_form': answer_form,
     }
     return render(request, 'topic-detail.html', context)
-
-
 
 @login_required(login_url='login')
 def userDashboard(request):
