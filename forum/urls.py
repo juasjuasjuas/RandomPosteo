@@ -1,5 +1,8 @@
 from django.urls import path
-
+from django.contrib import admin
+from django.urls import path, include
+from django.conf import settings # new
+from django.conf.urls.static import static # new
 from .import views
 
 urlpatterns = [
@@ -12,4 +15,11 @@ urlpatterns = [
     path('downvote/', views.downvote, name='downvote'),
     path('blog/', views.blogListView, name='blog'),
     path('article/<slug:slug>/', views.blogDetailView, name='article-detail'),
+    path('admin/', admin.site.urls),
+    path('', include('forum.urls')),
+    path('register/', include('registration.urls')),
+    path('baton/', include('baton.urls')),
 ]
+
+if settings.DEBUG: # this needs to be inside the if statement
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
