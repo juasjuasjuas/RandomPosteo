@@ -16,7 +16,6 @@ urlpatterns = [
     path('blog/', views.blogListView, name='blog'),
     path('article/<slug:slug>/', views.blogDetailView, name='article-detail'),
     path('admin/', admin.site.urls),
-    path('', include('forum.urls')),
     path('register/', include('registration.urls')),
     path('baton/', include('baton.urls')),
 ]
