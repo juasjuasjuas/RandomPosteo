@@ -47,6 +47,7 @@ def userPost(request):
     return render(request, 'user-post.html', context)
 
 #@login_required(login_url='login')
+
 def postTopic(request, pk):
     post_topic = get_object_or_404(UserPost, pk=pk)
 
@@ -55,18 +56,33 @@ def postTopic(request, pk):
 
     answers = Answer.objects.filter(user_post=post_topic)
     answer_form = AnswerForm()
+    image_form = AnswerImageForm()  # Initialize ImageForm
 
     if request.method == "POST" and request.user.is_authenticated:
-        answer_form = AnswerForm(request.POST, request.FILES) # Include request.FILES
-        if answer_form.is_valid():
-            answer = answer_form.save(commit=False) # Don't save immediately
-            answer.user_post = post_topic
-            answer.user = request.user
-            answer.save() # Now save
+        answer_form = AnswerForm(request.POST)
+        image_form = AnswerImageForm(request.POST, request.FILES)  # Handle uploaded image
+
+        if answer_form.is_valid() and image_form.is_valid():
+            content = answer_form.cleaned_data['content']
+            image_path = None
+
+            if image_form.cleaned_data['image']:
+                image_file = image_form.cleaned_data['image']
+                file_extension = os.path.splitext(image_file.name)[1]
+                unique_filename = str(uuid.uuid4()) + file_extension  # Generate unique name
+                image_path = os.path.join(settings.MEDIA_ROOT, unique_filename)
+
+                with open(image_path, 'wb+') as destination:
+                    for chunk in image_file.chunks():
+                        destination.write(chunk)
+
+            answer = Answer.objects.create(user_post=post_topic, user=request.user, content=content, image_path=image_path)
             return HttpResponseRedirect(post_topic.get_absolute_url())
         else:
             for error in answer_form.errors:
                 messages.error(request, answer_form.errors[error])
+            for error in image_form.errors:
+                messages.error(request, image_form.errors[error])
             return redirect(request.META.get('HTTP_REFERER'))
     elif request.method == "POST" and not request.user.is_authenticated:
         messages.error(request, "You must be logged in to post a response.")
@@ -76,8 +92,10 @@ def postTopic(request, pk):
         'topic': post_topic,
         'answers': answers,
         'answer_form': answer_form,
+        'image_form': image_form,  # Add image form to context
     }
     return render(request, 'topic-detail.html', context)
+
 
 @login_required(login_url='login')
 def userDashboard(request):

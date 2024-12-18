@@ -57,8 +57,7 @@
                         {% if answer.content %}
                           <p class="mb-0">{{ answer.content }}</p>
                         {% endif %}
-                        {% if answer.image %}
-                          <img src="{{ answer.image.url }}" alt="Answer Image" width="200">
+                        {% if answer.image_path %}  <img src="{{ MEDIA_URL }}{{ answer.image_path|slice:'15:' }}" alt="Answer Image" width="200">
                         {% endif %}
                       </div>
                       <div id="vote-section">
@@ -73,10 +72,12 @@
   
               {% if user.is_authenticated %}
                 <h2>Post a Response:</h2>
-                <form action="" method="POST" enctype="multipart/form-data" class="dx-form mt-50 mb-45">  <div class="row vertical-gap">
+                <form action="" method="POST" enctype="multipart/form-data" class="dx-form mt-50 mb-45">
+                  <div class="row vertical-gap">
                     <div class="col-12">
                       {% csrf_token %}
-                      {{ answer_form.as_p }}  <input type="submit" class="dx-btn dx-btn-lg" value="Post Answer">
+                      {{ answer_form.as_p }}
+                      {{ image_form.as_p }}  <input type="submit" class="dx-btn dx-btn-lg" value="Post Answer">
                     </div>
                   </div>
                 </form>
