@@ -8,6 +8,7 @@ from django.contrib import messages
 import os
 import uuid
 from django.conf import settings
+
 # Model Forms.
 from .forms import UserPostForm, AnswerForm
 # String module
@@ -59,7 +60,7 @@ def postTopic(request, pk):
     answer_form = AnswerForm()
 
     if request.method == "POST" and request.user.is_authenticated:
-        answer_form = AnswerForm(request.POST)
+        answer_form = AnswerForm(request.POST, request.FILES)
 
         if answer_form.is_valid():
             content = answer_form.cleaned_data['content']
@@ -68,7 +69,7 @@ def postTopic(request, pk):
             if request.FILES.get('image'):  # Check if 'image' is in request.FILES
                 image_file = request.FILES['image']
                 file_extension = os.path.splitext(image_file.name)[1]
-                unique_filename = str(uuid.uuid4()) + file_extension # Generate unique name
+                unique_filename = str(uuid.uuid4()) + file_extension  # Generate unique name
                 image_path = os.path.join(settings.MEDIA_ROOT, 'profile_images', unique_filename)  # Save in profile_images folder
 
                 try:
