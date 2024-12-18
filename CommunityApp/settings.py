@@ -138,10 +138,6 @@ STATIC_URL = '/static/'
 # Location of project wide static assets.
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
-# Location that holds user-uploaded files.
-#MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
-# URL that handles the media files served from MEDIA_ROOT. 
-#MEDIA_URL = '/images/'
 
 
 MEDIA_URL = '/media/'  # URL for accessing media files

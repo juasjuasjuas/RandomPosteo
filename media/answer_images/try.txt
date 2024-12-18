@@ -1,0 +1,351 @@
+<div class="dx-box-1 pb-100 bg-grey-6">
+    <div class="container">
+      <div class="row vertical-gap md-gap">
+        <div class="col-lg-8">
+          <div class="dx-blog-post dx-box dx-box-decorated">
+  
+            <div class="dx-blog-post-box">
+  
+              <h1 class="h3 dx-blog-post-title">ho</h1>
+              <ul class="dx-blog-post-info">
+                <li>Date Posted: Nov. 13, 2020, 10:04 p.m.</li>
+                <li>Total Views: 3</li>
+                <li>Author: lubaba</li>
+              </ul>
+              <p class="mnb-2">boo</p>
+            </div>
+  
+            <div class="dx-box mt-55">
+              
+                <h2 class="h4 mb-45">9 answers in this topic: </h2>
+              
+              
+                <div class="dx-comment">
+  
+                  <div>
+                    <div class="dx-comment-img">
+                      <img src="/media/pro_pic.png" alt="" class="rounded-circle">
+                    </div>
+                    <div class="dx-comment-cont">
+                      <p class="dx-comment-info">
+                        <span class="dx-comment-name">Lubaba</span>
+  
+                        
+                          <span class="dx-comment-profession">
+                            <img src="/static/images/badge-doctor.png" width="45px;" alt="">
+                            <span class="label-doctor">Certified Doctor</span>
+                          </span>
+                        
+  
+                        <span class="dx-comment-date">
+                          answered at Nov. 13, 2020, 10:04 p.m.
+                        </span>
+                      </p>
+  
+                      <div class="dx-comment-text">
+                        
+                          <p class="mb-0">kol</p>
+                        
+                        
+                      </div>
+                      <div id="vote-section">
+                        
+                      </div>
+                      </div>
+                  </div>
+                </div>
+              
+                <div class="dx-comment">
+  
+                  <div>
+                    <div class="dx-comment-img">
+                      <img src="/media/holding-back-tears-trying-not-to-cry.gif" alt="" class="rounded-circle">
+                    </div>
+                    <div class="dx-comment-cont">
+                      <p class="dx-comment-info">
+                        <span class="dx-comment-name">Megustanlastetas</span>
+  
+                        
+                          <span class="dx-comment-profession">
+                            <img src="/static/images/badge-user.png" width="45px;" alt="">
+                            <span class="label-user">General User</span>
+                          </span>
+                        
+  
+                        <span class="dx-comment-date">
+                          answered at Dec. 19, 2024, 12:51 a.m.
+                        </span>
+                      </p>
+  
+                      <div class="dx-comment-text">
+                        
+                          <p class="mb-0">hola por trababurgo del tripico</p>
+                        
+                        
+                      </div>
+                      <div id="vote-section">
+                        
+                      </div>
+                      </div>
+                  </div>
+                </div>
+              
+                <div class="dx-comment">
+  
+                  <div>
+                    <div class="dx-comment-img">
+                      <img src="/media/holding-back-tears-trying-not-to-cry.gif" alt="" class="rounded-circle">
+                    </div>
+                    <div class="dx-comment-cont">
+                      <p class="dx-comment-info">
+                        <span class="dx-comment-name">Megustanlastetas</span>
+  
+                        
+                          <span class="dx-comment-profession">
+                            <img src="/static/images/badge-user.png" width="45px;" alt="">
+                            <span class="label-user">General User</span>
+                          </span>
+                        
+  
+                        <span class="dx-comment-date">
+                          answered at Dec. 19, 2024, 1:25 a.m.
+                        </span>
+                      </p>
+  
+                      <div class="dx-comment-text">
+                        
+                          <p class="mb-0">mijita rica</p>
+                        
+                        
+                      </div>
+                      <div id="vote-section">
+                        
+                      </div>
+                      </div>
+                  </div>
+                </div>
+              
+                <div class="dx-comment">
+  
+                  <div>
+                    <div class="dx-comment-img">
+                      <img src="/media/holding-back-tears-trying-not-to-cry.gif" alt="" class="rounded-circle">
+                    </div>
+                    <div class="dx-comment-cont">
+                      <p class="dx-comment-info">
+                        <span class="dx-comment-name">Megustanlastetas</span>
+  
+                        
+                          <span class="dx-comment-profession">
+                            <img src="/static/images/badge-user.png" width="45px;" alt="">
+                            <span class="label-user">General User</span>
+                          </span>
+                        
+  
+                        <span class="dx-comment-date">
+                          answered at Dec. 19, 2024, 1:54 a.m.
+                        </span>
+                      </p>
+  
+                      <div class="dx-comment-text">
+                        
+                          <p class="mb-0">trile</p>
+                        
+                        
+                      </div>
+                      <div id="vote-section">
+                        
+                      </div>
+                      </div>
+                  </div>
+                </div>
+              
+                <div class="dx-comment">
+  
+                  <div>
+                    <div class="dx-comment-img">
+                      <img src="/media/holding-back-tears-trying-not-to-cry.gif" alt="" class="rounded-circle">
+                    </div>
+                    <div class="dx-comment-cont">
+                      <p class="dx-comment-info">
+                        <span class="dx-comment-name">Megustanlastetas</span>
+  
+                        
+                          <span class="dx-comment-profession">
+                            <img src="/static/images/badge-user.png" width="45px;" alt="">
+                            <span class="label-user">General User</span>
+                          </span>
+                        
+  
+                        <span class="dx-comment-date">
+                          answered at Dec. 19, 2024, 2:32 a.m.
+                        </span>
+                      </p>
+  
+                      <div class="dx-comment-text">
+                        
+                          <p class="mb-0">sd</p>
+                        
+                        
+                      </div>
+                      <div id="vote-section">
+                        
+                      </div>
+                      </div>
+                  </div>
+                </div>
+              
+                <div class="dx-comment">
+  
+                  <div>
+                    <div class="dx-comment-img">
+                      <img src="/media/holding-back-tears-trying-not-to-cry.gif" alt="" class="rounded-circle">
+                    </div>
+                    <div class="dx-comment-cont">
+                      <p class="dx-comment-info">
+                        <span class="dx-comment-name">Megustanlastetas</span>
+  
+                        
+                          <span class="dx-comment-profession">
+                            <img src="/static/images/badge-user.png" width="45px;" alt="">
+                            <span class="label-user">General User</span>
+                          </span>
+                        
+  
+                        <span class="dx-comment-date">
+                          answered at Dec. 19, 2024, 2:37 a.m.
+                        </span>
+                      </p>
+  
+                      <div class="dx-comment-text">
+                        
+                          <p class="mb-0">bvvv</p>
+                        
+                          <img src="/media/home/ubuntu/RandomPosteo/static/images/answer_images/38440454-2a95-44ac-b8a6-d92d479e69b1.png" alt="Answer Image" width="200">
+                        
+                      </div>
+                      <div id="vote-section">
+                        
+                      </div>
+                      </div>
+                  </div>
+                </div>
+              
+                <div class="dx-comment">
+  
+                  <div>
+                    <div class="dx-comment-img">
+                      <img src="/media/holding-back-tears-trying-not-to-cry.gif" alt="" class="rounded-circle">
+                    </div>
+                    <div class="dx-comment-cont">
+                      <p class="dx-comment-info">
+                        <span class="dx-comment-name">Megustanlastetas</span>
+  
+                        
+                          <span class="dx-comment-profession">
+                            <img src="/static/images/badge-user.png" width="45px;" alt="">
+                            <span class="label-user">General User</span>
+                          </span>
+                        
+  
+                        <span class="dx-comment-date">
+                          answered at Dec. 19, 2024, 3:04 a.m.
+                        </span>
+                      </p>
+  
+                      <div class="dx-comment-text">
+                        
+                          <p class="mb-0">ffgh</p>
+                        
+                          <img src="/media/home/ubuntu/RandomPosteo/media/answer_images/cc1f5818-0331-408d-8fca-5bcede628218.png" alt="Answer Image" width="200">
+                        
+                      </div>
+                      <div id="vote-section">
+                        
+                      </div>
+                      </div>
+                  </div>
+                </div>
+              
+                <div class="dx-comment">
+  
+                  <div>
+                    <div class="dx-comment-img">
+                      <img src="/media/holding-back-tears-trying-not-to-cry.gif" alt="" class="rounded-circle">
+                    </div>
+                    <div class="dx-comment-cont">
+                      <p class="dx-comment-info">
+                        <span class="dx-comment-name">Megustanlastetas</span>
+  
+                        
+                          <span class="dx-comment-profession">
+                            <img src="/static/images/badge-user.png" width="45px;" alt="">
+                            <span class="label-user">General User</span>
+                          </span>
+                        
+  
+                        <span class="dx-comment-date">
+                          answered at Dec. 19, 2024, 3:15 a.m.
+                        </span>
+                      </p>
+  
+                      <div class="dx-comment-text">
+                        
+                          <p class="mb-0">jupiter</p>
+                        
+                        
+                      </div>
+                      <div id="vote-section">
+                        
+                      </div>
+                      </div>
+                  </div>
+                </div>
+              
+                <div class="dx-comment">
+  
+                  <div>
+                    <div class="dx-comment-img">
+                      <img src="/media/holding-back-tears-trying-not-to-cry.gif" alt="" class="rounded-circle">
+                    </div>
+                    <div class="dx-comment-cont">
+                      <p class="dx-comment-info">
+                        <span class="dx-comment-name">Megustanlastetas</span>
+  
+                        
+                          <span class="dx-comment-profession">
+                            <img src="/static/images/badge-user.png" width="45px;" alt="">
+                            <span class="label-user">General User</span>
+                          </span>
+                        
+  
+                        <span class="dx-comment-date">
+                          answered at Dec. 19, 2024, 3:16 a.m.
+                        </span>
+                      </p>
+  
+                      <div class="dx-comment-text">
+                        
+                          <p class="mb-0">saturno</p>
+                        
+                          <img src="/media/home/ubuntu/RandomPosteo/media/answer_images/6c73e62d-ba87-4882-94df-e12791a9f951.png" alt="Answer Image" width="200">
+                        
+                      </div>
+                      <div id="vote-section">
+                        
+                      </div>
+                      </div>
+                  </div>
+                </div>
+              
+  
+              
+                <p>Please <a href="/login/">log in</a> to post a response.</p>
+              
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
