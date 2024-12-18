@@ -71,19 +71,6 @@ class TopicView(models.Model):
     def __str__(self):
         return self.user_post.title
 
-    
-class Answer(models.Model):
-    user_post = models.ForeignKey(UserPost, on_delete=models.CASCADE)
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    content = models.TextField(max_length=500, blank=True)  # Make text optional
-    image = models.ImageField(upload_to='answer_images/', blank=True, null=True) # Add ImageField
-    date_created = models.DateTimeField(auto_now_add=True, null=True)
-    upvotes = models.ManyToManyField(User, blank=True, related_name='upvotes')
-    downvotes = models.ManyToManyField(User, blank=True, related_name='downvotes')
-
-    def __str__(self):
-        return f"Answer by {self.user.username} on {self.user_post.title}"    
-
 
 
 
