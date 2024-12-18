@@ -39,19 +39,20 @@ class UserPost(models.Model):
         return TopicView.objects.filter(user_post=self).count()
 
 class Answer(models.Model):
-    user_post = models.ForeignKey(UserPost, on_delete=models.CASCADE)
-    user = models.ForeignKey(User, on_delete = models.CASCADE)
-    content = models.TextField(max_length=500)
+    user_post = models.ForeignKey('forum.UserPost', on_delete=models.CASCADE)  # Added app label
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    content = models.TextField(max_length=500, blank=True)  # Made content optional
+    image = models.ImageField(upload_to='answer_images/', blank=True, null=True)  # Added ImageField
     date_created = models.DateTimeField(auto_now_add=True, null=True)
     upvotes = models.ManyToManyField(User, blank=True, related_name='upvotes')
     downvotes = models.ManyToManyField(User, blank=True, related_name='downvotes')
 
     def __str__(self):
-        return self.user_post.title
-    
+        return f"Answer by {self.user.username} on {self.user_post.title}"
+
     @property
     def upvotes_count(self):
-        return Answer.objects.filter(user=self).count()
+        return self.upvotes.count()  # Corrected upvote count
 
 class BlogPost(models.Model):
     title = models.CharField(max_length=100)

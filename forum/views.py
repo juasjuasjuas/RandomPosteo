@@ -8,7 +8,6 @@ from django.contrib import messages
 import os
 import uuid
 from django.conf import settings
-
 # Model Forms.
 from .forms import UserPostForm, AnswerForm
 # String module
@@ -60,7 +59,7 @@ def postTopic(request, pk):
     answer_form = AnswerForm()
 
     if request.method == "POST" and request.user.is_authenticated:
-        answer_form = AnswerForm(request.POST, request.FILES)
+        answer_form = AnswerForm(request.POST, request.FILES)  # Include request.FILES
 
         if answer_form.is_valid():
             content = answer_form.cleaned_data['content']
@@ -69,8 +68,8 @@ def postTopic(request, pk):
             if request.FILES.get('image'):  # Check if 'image' is in request.FILES
                 image_file = request.FILES['image']
                 file_extension = os.path.splitext(image_file.name)[1]
-                unique_filename = str(uuid.uuid4()) + file_extension  # Generate unique name
-                image_path = os.path.join(settings.MEDIA_ROOT, 'profile_images', unique_filename)  # Save in profile_images folder
+                unique_filename = str(uuid.uuid4()) + file_extension
+                image_path = os.path.join(settings.MEDIA_ROOT, 'answer_images/', unique_filename)  # Specify upload path
 
                 try:
                     with open(image_path, 'wb+') as destination:
@@ -80,12 +79,19 @@ def postTopic(request, pk):
                     messages.error(request, f"Error saving image: {e}")
                     return redirect(request.META.get('HTTP_REFERER'))
 
-            answer = Answer.objects.create(user_post=post_topic, user=request.user, content=content, image_path=image_path)
-            return HttpResponseRedirect(post_topic.get_absolute_url())
+            answer = answer_form.save(commit=False)  # Don't save immediately
+            answer.user_post = post_topic
+            answer.user = request.user
+            answer.content = content  # Set content after form validation
+            if image_path:
+                answer.image = image_path
+            answer.save()  # Now save
 
+            return HttpResponseRedirect(post_topic.get_absolute_url())
         else:
-            for error in answer_form.errors:
-                messages.error(request, answer_form.errors[error])
+            for error, error_list in answer_form.errors.items():
+                for message in error_list:
+                    messages.error(request, f"{error}: {message}")
             return redirect(request.META.get('HTTP_REFERER'))
     elif request.method == "POST" and not request.user.is_authenticated:
         messages.error(request, "You must be logged in to post a response.")
