@@ -6,9 +6,12 @@
     <div class="container">
       <div class="row vertical-gap md-gap">
         <div class="col-lg-8">
-          <div class="dx-blog-post dx-box dx-box-decorated">
   
+          <div class="dx-blog-post dx-box dx-box-decorated">
             <div class="dx-blog-post-box">
+              {% if topic.image %}
+                <img src="{{ topic.image.url }}" alt="Post Image" class="img-fluid mb-3">
+              {% endif %}
   
               <h1 class="h3 dx-blog-post-title">{{ topic.title }}</h1>
               <ul class="dx-blog-post-info">
@@ -17,15 +20,15 @@
                 <li>Author: {{ topic.author.user }}</li>
               </ul>
               <p class="mnb-2">{{ topic.description }}</p>
-                
-                {% if answer.image %}  <img src="{{ answer.image.url }}" alt="Answer Image" width="200">
-                {% endif %}
             </div>
+          </div>
   
-            <div class="dx-box mt-55">
-              {% if answers.count > 0 %}
-                <h2 class="h4 mb-45">{{ answers.count }} answer{{ answers|pluralize }} in this topic: </h2>
-              {% else %}
+          <div class="dx-box mt-55">
+            {% if answers.count > 0 %}
+              <h2 class="h4 mb-45">{{ answers.count }} answer{{ answers|pluralize }} in this topic: </h2>
+            {% else %}
+              <h2 class="h4 mb-45">Be the first to answer in this topic!</h2>
+            {% endif %}
                 <h2 class="h4 mb-45">Be the first to answer in this topic!</h2>
               {% endif %}
               {% for answer in answers %}
