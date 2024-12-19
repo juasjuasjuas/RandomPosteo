@@ -17,11 +17,9 @@
                 <li>Author: {{ topic.author.user }}</li>
               </ul>
               <p class="mnb-2">{{ topic.description }}</p>
-                {% if answer.content %}
-                  <p class="mb-0">{{ answer.content }}</p>
-                {% endif %}
+                
                 {% if answer.image %}  <img src="{{ answer.image.url }}" alt="Answer Image" width="200">
-                {% endif %}
+            
             </div>
   
             <div class="dx-box mt-55">
