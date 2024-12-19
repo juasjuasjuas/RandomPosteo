@@ -9,7 +9,7 @@
                 <div class="col-lg-7">
                     <div class="dx-box-decorated">
                         <div class="dx-box-content text-center">
-                            <h2 class="h4">Profile Information</h2>
+                            <h2 class="h4">Información del perfil</h2>
                             <div class="dx-comment-img">
                                 <img style="width: 100px;" style="margin-bottom: 20px;"
                                     src="{{ user.author.profile_pic.url }}" alt="" class="rounded-circle">
@@ -26,7 +26,7 @@
                                     Certified Doctor
                                     {% else %}
                                     
-                                    General User
+                                    Usuario general
                                     {% endif %}
                                 </div>
                             </div>
@@ -36,7 +36,7 @@
                 <div class="col-lg-5">
                     <div class="dx-box-decorated">
                         <div class="dx-box-content">
-                            <h2 class="h4" style="margin-left: 25px;">Update Profile</h2>
+                            <h2 class="h4" style="margin-left: 25px;">Actualizar perfil</h2>
                             <form id="profile-form" method="POST" action="" class="dx-form"
                                 enctype="multipart/form-data">
                                 <div class="dx-box-content">
@@ -44,7 +44,7 @@
                                     {{ user_form.as_p }}
                                     {{ profile_form.as_p }}
                                     <div class="dx-form-group">
-                                        <input type="submit" value="Save Changes" class="dx-btn dx-btn-xl dx-btn-block">
+                                        <input type="submit" value="Guardar cambios" class="dx-btn dx-btn-xl dx-btn-block">
                                     </div>
                                 </div>
                             </form>

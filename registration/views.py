@@ -82,7 +82,7 @@ def profileView(request):
         if user_form.is_valid() and profile_form.is_valid():
             user_form.save()
             profile_form.save()
-            messages.success(request, f"Your profile has been updated successfully!")
+            messages.success(request, f"Tu perfil se ha actualizado correctamente!")
             return redirect('profile')
     else:
         user_form = UserUpdateForm(instance=request.user)

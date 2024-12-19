@@ -27,7 +27,7 @@
                     {% if answers.count > 0 %}
                         <h2 class="h4 mb-45">{{ answers.count }} answer{{ answers|pluralize }} in this topic:</h2>
                     {% else %}
-                        <h2 class="h4 mb-45">Be the first to answer in this topic!</h2>
+                        <h2 class="h4 mb-45">Se el primero en responder este post!</h2>
                     {% endif %}
 
                     {% for answer in answers %}
@@ -62,18 +62,18 @@
                     {% endfor %}
 
                     {% if user.is_authenticated %}
-                        <h2>Post a Response:</h2>
+                        <h2>Publica una respuesta:</h2>
                         <form action="" method="POST" enctype="multipart/form-data" class="dx-form mt-50 mb-45">
                             <div class="row vertical-gap">
                                 <div class="col-12">
                                     {% csrf_token %}
                                     {{ answer_form.as_p }}
-                                    <input type="submit" class="dx-btn dx-btn-lg" value="Post Answer">
+                                    <input type="submit" class="dx-btn dx-btn-lg" value="Publicar respuesta">
                                 </div>
                             </div>
                         </form>
                     {% else %}
-                        <p>Please <a href="{% url 'login' %}">log in</a> to post a response.</p>
+                        <p>Por favor <a href="{% url 'login' %}">inicia sesión/a> para postear una respuesta.</p>
                     {% endif %}
                 </div>
             </div>

@@ -17,7 +17,7 @@
   
             <div class="dx-box mt-55">
               
-                <h2 class="h4 mb-45">9 answers in this topic: </h2>
+                <h2 class="h4 mb-45">9 respuestas en este post: </h2>
               
               
                 <div class="dx-comment">
