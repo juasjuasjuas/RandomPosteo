@@ -7,21 +7,21 @@
       <div class="row vertical-gap md-gap">
         <div class="col-lg-8">
   
-          <div class="dx-blog-post dx-box dx-box-decorated">
-            <div class="dx-blog-post-box">
-              {% if topic.image %}
-                <img src="{{ topic.image.url }}" alt="Post Image" class="img-fluid mb-3">
-              {% endif %}
-  
-              <h1 class="h3 dx-blog-post-title">{{ topic.title }}</h1>
-              <ul class="dx-blog-post-info">
-                <li>Date Posted: {{ topic.date_created }}</li>
-                <li>Total Views: {{ topic.topic_view_count }}</li>
-                <li>Author: {{ topic.author.user }}</li>
-              </ul>
-              <p class="mnb-2">{{ topic.description }}</p>
-            </div>
-          </div>
+            <div class="dx-blog-post dx-box dx-box-decorated">
+                <div class="dx-blog-post-box">
+                  {% if topic.image %}
+                    <img src="{{ topic.image.url }}" alt="Post Image" class="img-fluid mb-3">
+                  {% endif %}
+      
+                  <h1 class="h3 dx-blog-post-title">{{ topic.title }}</h1>
+                  <ul class="dx-blog-post-info">
+                    <li>Date Posted: {{ topic.date_created }}</li>
+                    <li>Total Views: {{ topic.topic_view_count }}</li>
+                    <li>Author: {{ topic.author.user }}</li>
+                  </ul>
+                  <p class="mnb-2">{{ topic.description }}</p>
+                </div>
+              </div>
   
           <div class="dx-box mt-55">
             {% if answers.count > 0 %}
