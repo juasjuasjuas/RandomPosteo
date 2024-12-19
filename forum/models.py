@@ -15,17 +15,18 @@ class Author(models.Model):
         return self.user.username
 
 class UserPost(models.Model):
-    author = models.ForeignKey(Author, on_delete=models.CASCADE, null=True)
-    title = models.CharField(max_length=200, null=True)
-    description = models.TextField(max_length=500, null=True)
-    date_created = models.DateTimeField(auto_now_add=True, null=True)
+  author = models.ForeignKey(Author, on_delete=models.CASCADE, null=True)
+  title = models.CharField(max_length=200, null=True)
+  description = models.TextField(max_length=500, null=True)
+  date_created = models.DateTimeField(auto_now_add=True, null=True)
+  image = models.ImageField(upload_to='userpost_images/', blank=True, null=True)  # Added image field
 
-    def __str__(self):
-        return self.title
+  def __str__(self):
+    return self.title
 
-    def get_absolute_url(self):
-        return reverse('topic-detail', kwargs={
-            'pk': self.pk
+  def get_absolute_url(self):
+    return reverse('topic-detail', kwargs={
+      'pk': self.pk
     })
 
     # Use this method as a property 
