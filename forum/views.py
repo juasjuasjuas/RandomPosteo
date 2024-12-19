@@ -37,17 +37,8 @@ def userPost(request):
 
     if request.method == 'POST':
         if form.is_valid():
-            # Use form.cleaned_data to access uploaded image
-            image = form.cleaned_data['image']
-
-            title = form.cleaned_data['title']
-            description = form.cleaned_data['description']
-
-            # Create UserPost object with image
-            topic = UserPost.objects.create(
-                title=title, author=request.user.author, description=description, image=image
-            )
-            topic.save()
+            # Use form.save() to create and save the object
+            topic = form.save()
 
             return redirect('home')
         else:
