@@ -1,0 +1,540 @@
+<html lang="en" class="fontawesome-i2svg-active fontawesome-i2svg-complete"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>MoviesForum| Pagina para postear cosas random</title>
+
+    <meta name="description" content="Amdesk - Help Center HTML template for your digital products">
+    <meta name="keywords" content="helpdesk, forum, template, HTML template, responsive, clean">
+    <meta name="author" content="nK">
+
+    <style type="text/css">svg:not(:root).svg-inline--fa{overflow:visible}.svg-inline--fa{display:inline-block;font-size:inherit;height:1em;overflow:visible;vertical-align:-.125em}.svg-inline--fa.fa-lg{vertical-align:-.225em}.svg-inline--fa.fa-w-1{width:.0625em}.svg-inline--fa.fa-w-2{width:.125em}.svg-inline--fa.fa-w-3{width:.1875em}.svg-inline--fa.fa-w-4{width:.25em}.svg-inline--fa.fa-w-5{width:.3125em}.svg-inline--fa.fa-w-6{width:.375em}.svg-inline--fa.fa-w-7{width:.4375em}.svg-inline--fa.fa-w-8{width:.5em}.svg-inline--fa.fa-w-9{width:.5625em}.svg-inline--fa.fa-w-10{width:.625em}.svg-inline--fa.fa-w-11{width:.6875em}.svg-inline--fa.fa-w-12{width:.75em}.svg-inline--fa.fa-w-13{width:.8125em}.svg-inline--fa.fa-w-14{width:.875em}.svg-inline--fa.fa-w-15{width:.9375em}.svg-inline--fa.fa-w-16{width:1em}.svg-inline--fa.fa-w-17{width:1.0625em}.svg-inline--fa.fa-w-18{width:1.125em}.svg-inline--fa.fa-w-19{width:1.1875em}.svg-inline--fa.fa-w-20{width:1.25em}.svg-inline--fa.fa-pull-left{margin-right:.3em;width:auto}.svg-inline--fa.fa-pull-right{margin-left:.3em;width:auto}.svg-inline--fa.fa-border{height:1.5em}.svg-inline--fa.fa-li{width:2em}.svg-inline--fa.fa-fw{width:1.25em}.fa-layers svg.svg-inline--fa{bottom:0;left:0;margin:auto;position:absolute;right:0;top:0}.fa-layers{display:inline-block;height:1em;position:relative;text-align:center;vertical-align:-.125em;width:1em}.fa-layers svg.svg-inline--fa{-webkit-transform-origin:center center;transform-origin:center center}.fa-layers-counter,.fa-layers-text{display:inline-block;position:absolute;text-align:center}.fa-layers-text{left:50%;top:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);-webkit-transform-origin:center center;transform-origin:center center}.fa-layers-counter{background-color:#ff253a;border-radius:1em;-webkit-box-sizing:border-box;box-sizing:border-box;color:#fff;height:1.5em;line-height:1;max-width:5em;min-width:1.5em;overflow:hidden;padding:.25em;right:0;text-overflow:ellipsis;top:0;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:top right;transform-origin:top right}.fa-layers-bottom-right{bottom:0;right:0;top:auto;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:bottom right;transform-origin:bottom right}.fa-layers-bottom-left{bottom:0;left:0;right:auto;top:auto;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:bottom left;transform-origin:bottom left}.fa-layers-top-right{right:0;top:0;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:top right;transform-origin:top right}.fa-layers-top-left{left:0;right:auto;top:0;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:top left;transform-origin:top left}.fa-lg{font-size:1.33333em;line-height:.75em;vertical-align:-.0667em}.fa-xs{font-size:.75em}.fa-sm{font-size:.875em}.fa-1x{font-size:1em}.fa-2x{font-size:2em}.fa-3x{font-size:3em}.fa-4x{font-size:4em}.fa-5x{font-size:5em}.fa-6x{font-size:6em}.fa-7x{font-size:7em}.fa-8x{font-size:8em}.fa-9x{font-size:9em}.fa-10x{font-size:10em}.fa-fw{text-align:center;width:1.25em}.fa-ul{list-style-type:none;margin-left:2.5em;padding-left:0}.fa-ul>li{position:relative}.fa-li{left:-2em;position:absolute;text-align:center;width:2em;line-height:inherit}.fa-border{border:solid .08em #eee;border-radius:.1em;padding:.2em .25em .15em}.fa-pull-left{float:left}.fa-pull-right{float:right}.fa.fa-pull-left,.fab.fa-pull-left,.fal.fa-pull-left,.far.fa-pull-left,.fas.fa-pull-left{margin-right:.3em}.fa.fa-pull-right,.fab.fa-pull-right,.fal.fa-pull-right,.far.fa-pull-right,.fas.fa-pull-right{margin-left:.3em}.fa-spin{-webkit-animation:fa-spin 2s infinite linear;animation:fa-spin 2s infinite linear}.fa-pulse{-webkit-animation:fa-spin 1s infinite steps(8);animation:fa-spin 1s infinite steps(8)}@-webkit-keyframes fa-spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes fa-spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}.fa-rotate-90{-webkit-transform:rotate(90deg);transform:rotate(90deg)}.fa-rotate-180{-webkit-transform:rotate(180deg);transform:rotate(180deg)}.fa-rotate-270{-webkit-transform:rotate(270deg);transform:rotate(270deg)}.fa-flip-horizontal{-webkit-transform:scale(-1,1);transform:scale(-1,1)}.fa-flip-vertical{-webkit-transform:scale(1,-1);transform:scale(1,-1)}.fa-flip-horizontal.fa-flip-vertical{-webkit-transform:scale(-1,-1);transform:scale(-1,-1)}:root .fa-flip-horizontal,:root .fa-flip-vertical,:root .fa-rotate-180,:root .fa-rotate-270,:root .fa-rotate-90{-webkit-filter:none;filter:none}.fa-stack{display:inline-block;height:2em;position:relative;width:2.5em}.fa-stack-1x,.fa-stack-2x{bottom:0;left:0;margin:auto;position:absolute;right:0;top:0}.svg-inline--fa.fa-stack-1x{height:1em;width:1.25em}.svg-inline--fa.fa-stack-2x{height:2em;width:2.5em}.fa-inverse{color:#fff}.sr-only{border:0;clip:rect(0,0,0,0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.sr-only-focusable:active,.sr-only-focusable:focus{clip:auto;height:auto;margin:0;overflow:visible;position:static;width:auto}</style><link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- START: Styles -->
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700%7cMaven+Pro:400,500,700" rel="stylesheet"><!-- %7c -->
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="/static/vendor/bootstrap/dist/css/bootstrap.min.css">
+
+    <!-- Fancybox -->
+    <link rel="stylesheet" href="/static/vendor/fancybox/dist/jquery.fancybox.min.css">
+
+    <!-- Pe icon 7 stroke -->
+    <link rel="stylesheet" href="/static/vendor/pixeden-stroke-7-icon/pe-icon-7-stroke/dist/pe-icon-7-stroke.min.css">
+
+    <!-- Swiper -->
+    <link rel="stylesheet" type="text/css" href="/static/vendor/swiper/dist/css/swiper.min.css">
+
+    <!-- Bootstrap Select -->
+    <link rel="stylesheet" type="text/css" href="/static/vendor/bootstrap-select/dist/css/bootstrap-select.min.css">
+
+    <!-- Dropzone -->
+    <link rel="stylesheet" type="text/css" href="/static/vendor/dropzone/dist/min/dropzone.min.css">
+
+    <!-- Quill -->
+    <link rel="stylesheet" type="text/css" href="/static/vendor/quill/dist/quill.snow.css">
+
+    <!-- Font Awesome -->
+    <script defer="" src="/static/vendor/fontawesome-free/js/all.js"></script>
+    <script defer="" src="/static/vendor/fontawesome-free/js/v4-shims.js"></script>
+
+    <!-- Amdesk -->
+    <link rel="stylesheet" href="/static/css/amdesk.min.css">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="/static/css/custom.css">
+
+    <!-- END: Styles -->
+
+    <!-- jQuery -->
+    <script src="/static/vendor/jquery/dist/jquery.min.js"></script>
+
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="dx-navbar dx-navbar-top dx-navbar-collapse dx-navbar-sticky dx-navbar-expand-lg dx-navbar-dropdown-triangle dx-navbar-autohide">
+        <div class="container">
+
+            <a href="/" class="dx-nav-logo">
+                <h2 class="text-white" style="margin-top:0px; padding-top:10px; margin-bottom:0;">MoviesForum</h2>
+            </a>
+
+            
+            <button type="button" class="dx-navbar-burger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span style="color:white">Menu</span> </button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="/">Home</a>
+                <div class="dropdown-divider"></div>
+                
+                <a class="dropdown-item" href="/user-dashboard/">Menu Usuario</a>
+                <a class="dropdown-item" href="/user-profile/">Perfil</a>
+                <a class="dropdown-item" href="/logout/">Logout</a>
+                
+            </div>
+
+            <div class="dx-navbar-content">
+
+                <ul class="dx-nav dx-nav-align-left">
+
+                    
+                    <li class="dx-drop-item">
+                        <a href="/">
+                            Home
+                        </a>
+                        
+                    </li>
+                    
+                    <li class="dx-drop-item">
+                        <a href="/user-post/">
+                            Postea un tema
+                        </a>
+                        
+                    </li>
+                </ul>
+
+                <ul class="dx-nav dx-nav-align-right">
+                    
+                    
+                    <li>
+                        <div class="dropdown dx-dropdown dx-dropdown-signin">
+                            <a class="dx-nav-signin" href="account.html" role="button" id="dropdownSignin" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="dx-nav-signin-img"><img src="/media/holding-back-tears-trying-not-to-cry.gif" alt=""></span>
+                                <span class="dx-nav-signin-name">megustanlastetas</span>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownSignin">
+                                <li>
+                                    <a href="/user-dashboard/">Menu Usuario</a>
+                                </li>
+                                <li>
+                                    <a href="/user-profile/">Perfil</a>
+                                </li>
+                                <li>
+                                    <a href="/logout/">Logout</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="dx-navbar dx-navbar-fullscreen">
+        <div class="container">
+            <button class="dx-navbar-burger">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="dx-navbar-content">
+
+                <ul class="dx-nav dx-nav-align-left">
+
+                    <li class="dx-drop-item">
+                        <a href="store.html">
+                            Store
+                        </a>
+                        <ul class="dx-navbar-dropdown">
+
+                            <li>
+                                <a href="store.html">
+                                    Store
+                                </a>
+                            </li>
+                            <li>
+                                <a href="product.html">
+                                    Product
+                                </a>
+                            </li>
+                            <li>
+                                <a href="checkout.html">
+                                    Checkout
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dx-drop-item active">
+                        <a href="blog.html">
+                            Blog
+                        </a>
+                        <ul class="dx-navbar-dropdown">
+
+                            <li>
+                                <a href="blog.html">
+                                    Blog
+                                </a>
+                            </li>
+                            <li class=" active">
+                                <a href="single-post.html">
+                                    Single Post
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dx-drop-item">
+                        <a href="help-center.html">
+                            Help Center
+                        </a>
+                        <ul class="dx-navbar-dropdown">
+
+                            <li>
+                                <a href="help-center.html">
+                                    Help Center
+                                </a>
+                            </li>
+                            <li class="dx-drop-item">
+                                <a href="documentations.html">
+                                    Documentations
+                                </a>
+                                <ul class="dx-navbar-dropdown">
+
+                                    <li>
+                                        <a href="documentations.html">
+                                            Documentations
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="single-documentation.html">
+                                            Single documentation
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dx-drop-item">
+                                <a href="articles.html">
+                                    Knowledge Base
+                                </a>
+                                <ul class="dx-navbar-dropdown">
+
+                                    <li>
+                                        <a href="articles.html">
+                                            Knowledge Base
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="single-article-category.html">
+                                            Single Article Category
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="single-article.html">
+                                            Single Article
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dx-drop-item">
+                                <a href="forums.html">
+                                    Forums
+                                </a>
+                                <ul class="dx-navbar-dropdown">
+
+                                    <li>
+                                        <a href="forums.html">
+                                            Forums
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="topics.html">
+                                            Topics
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="single-topic.html">
+                                            Single Topic
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dx-drop-item">
+                                <a href="ticket.html">
+                                    Ticket System
+                                </a>
+                                <ul class="dx-navbar-dropdown">
+
+                                    <li>
+                                        <a href="ticket.html">
+                                            Ticket System
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ticket-submit.html">
+                                            Submit Ticket
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ticket-submit-2.html">
+                                            Submit Ticket 2
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="single-ticket.html">
+                                            Single Ticket
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dx-drop-item">
+                        <a href="account.html">
+                            Account
+                        </a>
+                        <ul class="dx-navbar-dropdown">
+
+                            <li>
+                                <a href="account.html">
+                                    Account
+                                </a>
+                            </li>
+                            <li>
+                                <a href="account-licenses.html">
+                                    Licenses
+                                </a>
+                            </li>
+                            <li>
+                                <a href="account-settings.html">
+                                    Settings
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <ul class="dx-nav dx-nav-align-right">
+
+                    <li>
+                        <a class="dx-nav-icon" href="checkout.html">
+                            <span class="dx-nav-badge">2</span>
+                            <span class="icon dx-icon-bag"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a data-fancybox="" data-touch="false" data-close-existing="true" data-src="#login" href="javascript:;">Log In</a>
+                    </li>
+                    <li>
+                        <span><a data-fancybox="" data-touch="false" data-close-existing="true" data-src="#signup" href="javascript:;" class="dx-btn dx-btn-md dx-btn-transparent">Sign Up</a></span>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Navbar -->
+
+
+
+
+<div class="dx-box-1 pb-100 bg-grey-6">
+    <div class="container">
+      <div class="row vertical-gap md-gap">
+        <div class="col-lg-8">
+  
+            <div class="dx-blog-post dx-box dx-box-decorated">
+                <div class="dx-blog-post-box">
+                  
+      
+                  <h1 class="h3 dx-blog-post-title">sssssssssssssssss</h1>
+                  <ul class="dx-blog-post-info">
+                    <li>Date Posted: Dec. 19, 2024, 9:10 a.m.</li>
+                    <li>Total Views: 0</li>
+                    <li>Author: </li>
+                  </ul>
+                  <p class="mnb-2">sssssssssssssssss</p>
+                </div>
+              </div>
+  
+          <div class="dx-box mt-55">
+            
+              <h2 class="h4 mb-45">Be the first to answer in this topic!</h2>
+            
+        
+              
+  
+              
+                <h2>Post a Response:</h2>
+                <form action="" method="POST" enctype="multipart/form-data" class="dx-form mt-50 mb-45">
+                  <div class="row vertical-gap">
+                    <div class="col-12">
+                      <input type="hidden" name="csrfmiddlewaretoken" value="azb9OYkjWjHEN27qcPEEn12qMcv9vHV4vOUCPAWcUbPRcS866t0A5e5tdrRhGFHw">
+                      <p> <textarea name="content" cols="50" rows="8" class="form-control form-control-style-3" placeholder="Write your answer..." required="" id="id_content"></textarea></p>
+<p><label for="id_image">Image:</label> <input type="file" name="image" accept="image/*" id="id_image"></p>
+                       
+                      <input type="submit" class="dx-btn dx-btn-lg" value="Post Answer">
+                    </div>
+                  </div>
+                </form>
+              
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  
+
+
+
+
+<!-- START: Footer -->
+<footer class="dx-footer">
+    <div class="dx-box-1">
+        <div class="container">
+            <div class="row vertical-gap lg-gap">
+
+                <div class="col-sm-12 col-lg-12 text-center">
+
+                    <div class="dx-widget-footer">
+                        <div class="dx-widget-title">
+                            <a href="index-2.html" class="dx-widget-logo">
+                                <!-- <img src="/static/images/logo.svg" alt="" width="88px"> -->
+                                
+                            </a>
+                        </div>
+                        <div class="dx-widget-text">
+                            <p class="mb-0">© 2024  <span class="dib">MoviesForum</span> <span class="dib">All rights reserved.</span>
+                            </p>
+                        </div>
+                        <div class="dx-widget-text">
+                            <ul class="dx-social-links mnt-3">
+                                <li><a href="https://www.facebook.com/"><svg class="svg-inline--fa fa-facebook fa-w-14" aria-hidden="true" data-prefix="fab" data-icon="facebook" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M448 56.7v398.5c0 13.7-11.1 24.7-24.7 24.7H309.1V306.5h58.2l8.7-67.6h-67v-43.2c0-19.6 5.4-32.9 33.5-32.9h35.8v-60.5c-6.2-.8-27.4-2.7-52.2-2.7-51.6 0-87 31.5-87 89.4v49.9h-58.4v67.6h58.4V480H24.7C11.1 480 0 468.9 0 455.3V56.7C0 43.1 11.1 32 24.7 32h398.5c13.7 0 24.8 11.1 24.8 24.7z"></path></svg><!-- <span class="fab fa-facebook"></span> --></a></li>
+                                <li><a href="https://www.instagram.com/"><svg class="svg-inline--fa fa-instagram fa-w-14" aria-hidden="true" data-prefix="fab" data-icon="instagram" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg><!-- <span class="fab fa-instagram"></span> --></a></li>
+                                <li><a href="https://twitter.com/?lang=en"><svg class="svg-inline--fa fa-twitter-square fa-w-14" aria-hidden="true" data-prefix="fab" data-icon="twitter-square" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-48.9 158.8c.2 2.8.2 5.7.2 8.5 0 86.7-66 186.6-186.6 186.6-37.2 0-71.7-10.8-100.7-29.4 5.3.6 10.4.8 15.8.8 30.7 0 58.9-10.4 81.4-28-28.8-.6-53-19.5-61.3-45.5 10.1 1.5 19.2 1.5 29.6-1.2-30-6.1-52.5-32.5-52.5-64.4v-.8c8.7 4.9 18.9 7.9 29.6 8.3a65.447 65.447 0 0 1-29.2-54.6c0-12.2 3.2-23.4 8.9-33.1 32.3 39.8 80.8 65.8 135.2 68.6-9.3-44.5 24-80.6 64-80.6 18.9 0 35.9 7.9 47.9 20.7 14.8-2.8 29-8.3 41.6-15.8-4.9 15.2-15.2 28-28.8 36.1 13.2-1.4 26-5.1 37.8-10.2-8.9 13.1-20.1 24.7-32.9 34z"></path></svg><!-- <span class="fab fa-twitter-square"></span> --></a></li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- <div class="col-sm-6 col-lg-3">
+
+                    <div class="dx-widget-footer">
+                        <div class="dx-widget-title">
+                            Useful Links
+                        </div>
+                        <ul class="dx-widget-list">
+                            <li><a href="store.html">Store</a></li>
+                            <li><a href="checkout.html">Checkout</a></li>
+                            <li><a href="forums.html">Forums</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                        </ul>
+                        <ul class="dx-widget-list">
+                            <li><a href="help-center.html">Help Center</a></li>
+                            <li>
+                                <a data-fancybox data-touch="false" data-close-existing="true" data-src="#signup"
+                                    href="javascript:;">Sign Up</a>
+                            </li>
+                            <li>
+                                <a data-fancybox data-touch="false" data-close-existing="true" data-src="#login"
+                                    href="javascript:;">Log In</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div> -->
+                <!-- <div class="col-sm-6 col-lg-3">
+
+                    <div class="dx-widget-footer">
+                        <div class="dx-widget-title">
+                            Latest Products
+                        </div>
+                        <div class="dx-widget-portfolio">
+                            <a href="product.html">Quantial – Moving Upon Signs Moveth Lesser</a>
+                            <a href="product.html">Sensific – Saying Beast Lesser for in Fruitful</a>
+                            <a href="product.html">Minist – Subdue Above for Signs Dry is Have Great</a>
+                        </div>
+                    </div>
+
+                </div> -->
+                <!-- <div class="col-sm-6 col-lg-3">
+
+                    <div class="dx-widget-footer">
+                        <div class="dx-widget-title">
+                            Latest Posts
+                        </div>
+                        <a href="single-post.html" class="dx-widget-post">
+
+                            <span class="dx-widget-post-text">
+                                <span class="dx-widget-post-title">The Big Thing in Design</span>
+                                <span class="dx-widget-post-date">25 Sep 2018</span>
+                            </span>
+
+                        </a>
+                        <a href="single-post.html" class="dx-widget-post">
+
+                            <span class="dx-widget-post-text">
+                                <span class="dx-widget-post-title">Will Coding Ever Rule the World?</span>
+                                <span class="dx-widget-post-date">24 Sep 2018</span>
+                            </span>
+
+                        </a>
+                    </div>
+
+                </div> -->
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- END: Footer -->
+
+
+
+
+
+<!-- START: Scripts -->
+
+<!-- Object Fit Images -->
+<script src="/static/vendor/object-fit-images/dist/ofi.min.js"></script>
+
+<!-- Popper -->
+<script src="/static/vendor/popper.js/dist/umd/popper.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="/static/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<!-- Fancybox -->
+<script src="/static/vendor/fancybox/dist/jquery.fancybox.min.js"></script>
+
+<!-- Cleave -->
+<script src="/static/vendor/cleave.js/dist/cleave.min.js"></script>
+
+<!-- Validator -->
+<script src="/static/vendor/validator/validator.min.js"></script>
+
+<!-- Sticky Kit -->
+<script src="/static/vendor/sticky-kit/dist/sticky-kit.min.js"></script>
+
+<!-- Jarallax -->
+<script src="/static/vendor/jarallax/dist/jarallax.min.js"></script>
+<script src="/static/vendor/jarallax/dist/jarallax-video.min.js"></script>
+
+<!-- Isotope -->
+<script src="/static/vendor/isotope-layout/dist/isotope.pkgd.min.js"></script>
+
+<!-- ImagesLoaded -->
+<script src="/static/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+
+<!-- Swiper -->
+<script src="/static/vendor/swiper/dist/js/swiper.min.js"></script>
+
+<!-- Gist Embed -->
+<script src="/static/vendor/gist-embed/gist-embed.min.js"></script>
+
+<!-- Bootstrap Select -->
+<script src="/static/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+
+<!-- Dropzone -->
+<script src="/static/vendor/dropzone/dist/min/dropzone.min.js"></script>
+
+<!-- Quill -->
+<script src="/static/vendor/quill/dist/quill.min.js"></script>
+
+
+
+
+<div id="veepn-breach-alert"></div><style>@font-face{font-family:FigtreeVF;src:url(chrome-extension://panammoooggmlehahpcjckcncfeffcoi/fonts/FigtreeVF.woff2) format("woff2 supports variations"),url(chrome-extension://panammoooggmlehahpcjckcncfeffcoi/fonts/FigtreeVF.woff2) format("woff2-variations");font-weight:100 1000;font-display:swap}</style></body></html>
