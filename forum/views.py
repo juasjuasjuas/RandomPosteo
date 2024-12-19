@@ -16,7 +16,7 @@ from django.template.loader import render_to_string
 # Create your views here.
 
 def home(request):
-    user_posts = UserPost.objects.all()
+    user_posts = UserPost.objects.all().order_by('-date_created')
     
     # Display latest posts.
     latest_blogs = BlogPost.objects.order_by('-timestamp')[0:3]
