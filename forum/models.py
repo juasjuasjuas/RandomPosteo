@@ -59,7 +59,7 @@ class BlogPost(models.Model):
     slug = models.SlugField(max_length=200, unique=True, null=True, blank=True)
     content = models.TextField(blank=True, null=True)
     timestamp = models.DateTimeField(auto_now_add=True)
-    thumbnail = models.ImageField(default="header.jpg", null=True, blank=True)
+    thumbnail = models.ImageField(upload_to='answer_images/', blank=True, null=True)
 
     def __str__(self):
         return self.title
