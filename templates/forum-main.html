@@ -13,8 +13,8 @@
                 <div class="col-xl-7">
                     <h1 class="h2 mb-30 text-white text-center">Lugar para compartir experiencias similares.</h1>
                     <form action="{% url 'search-result' %}" class="dx-form dx-form-group-inputs">
-                        <input type="text" name="q" value="" class="form-control" placeholder="Search your issue (e.g. asthma, covid)">
-                        <button  type="submit" class="dx-btn dx-btn-lg">Search</button>
+                        <input type="text" name="q" value="" class="form-control" placeholder="Busqueda de Posts">
+                        <button  type="submit" class="dx-btn dx-btn-lg">Buscar</button>
                     </form>
                 </div>
                 {% if messages %}
@@ -43,16 +43,16 @@
                     <div class="dx-box dx-box-decorated">
                         <div class="dx-blog-post">
                             <div class="dx-blog-post-box pt-30 pb-30">
-                                <h2 class="h4 mnt-5 mb-9">Forum Topics</h2>
+                                <h2 class="h4 mnt-5 mb-9">Posts de discución</h2>
                             </div>
                             <div class="table-responsive">
                                 <table class="dx-table dx-table-default">
                                     <thead>
                                         <tr>
-                                            <th scope="col">Topic</th>
-                                            <th scope="col">Views</th>
-                                            <th scope="col">Answers</th>
-                                            <th scope="col">Post Date</th>
+                                            <th scope="col">Topico</th>
+                                            <th scope="col">Vistas</th>
+                                            <th scope="col">Respuestas</th>
+                                            <th scope="col">Fecha de post</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -87,23 +87,12 @@
                     <div class="dx-sticky dx-sidebar" data-sticky-offsetTop="120" data-sticky-offsetBot="40">
 
 
-                        <div class="dx-widget dx-box dx-box-decorated">
-                            <div class="dx-widget-title">
-                                Latest Articles
-                            </div>
-                            {% for blogs in latest_blogs %}
-                            <a href="{% url 'article-detail' blogs.slug %}" class="dx-widget-link">
-                                <span class="dx-widget-link-text">{{ blogs.title }}</span>
-                                <span class="dx-widget-link-date">{{ blogs.timestamp|date }}</span>
-                            </a>
-                            {% endfor %}
-                            
-                        </div>
+                    
 
 
                         <div class="dx-widget dx-box dx-box-decorated">
                             <div class="dx-widget-title">
-                                Latest Forum Topics
+                                Ultimos Posts
                             </div>
                             {% for topics in latest_topics %}
                             <a href="{% url 'topic-detail' topics.id %}" class="dx-widget-link">

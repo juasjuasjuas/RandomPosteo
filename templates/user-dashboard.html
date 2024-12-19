@@ -9,12 +9,12 @@
                 <div class="col-lg-4">
                     <div class="dx-box-decorated">
                         <div class="dx-box-content text-center">
-                            <h2 class="h4">User Dashboard</h2>
+                            <h2 class="h4">Menu de Usuario</h2>
                             <div class="dx-comment-img">
                                 <img style="width: 100px;" style="margin-bottom: 20px;"
                                     src="{{ user.author.profile_pic.url }}" alt="" class="rounded-circle">
                             </div>
-                            <p class="mnt5">{{ user.username }} | Joined @ {{ user.date_joined|date }}</p>
+                            <p class="mnt5">{{ user.username }} | Se unio @ {{ user.date_joined|date }}</p>
                         </div>
                     </div>
                 </div>
@@ -31,10 +31,10 @@
                                     <table class="dx-table dx-table-default">
                                         <thead>
                                             <tr>
-                                                <th scope="col">Topic</th>
-                                                <th scope="col">Views</th>
-                                                <th scope="col">Answers</th>
-                                                <th scope="col">Post Date</th>
+                                                <th scope="col">Topico</th>
+                                                <th scope="col">Vistas</th>
+                                                <th scope="col">Respuestas</th>
+                                                <th scope="col">Fecha de post</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -52,7 +52,7 @@
                                     </table>
                                 </div>
                             {% else %}
-                            <h2 class="h4 text-center">You didn't post a topic yet!</h2>
+                            <h2 class="h4 text-center">Todavia no posteas nada!</h2>
                             {% endif %}
                         </div>
                     </div>
@@ -69,8 +69,8 @@
                                 <table class="dx-table dx-table-default">
                                     <thead>
                                         <tr>
-                                            <th scope="col">Topic</th>
-                                            <th scope="col">Answers</th>
+                                            <th scope="col">Topicoc</th>
+                                            <th scope="col">Respuestas</th>
                                             <th scope="col">Upvote</th>
                                             <th scope="col">Downvote</th>
                                         </tr>

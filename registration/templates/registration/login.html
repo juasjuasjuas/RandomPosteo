@@ -14,17 +14,17 @@
         <form method="POST" action="" class="dx-form">
             {% csrf_token %}
             <div class="dx-form-group-md">
-                <input type="text" name="username" class="form-control form-control-style-4" placeholder="Username">
+                <input type="text" name="Nombre de Usuario" class="form-control form-control-style-4" placeholder="Username">
             </div>
             <div class="dx-form-group-md">
-                <input type="password" name="password" class="form-control form-control-style-4" placeholder="Password">
+                <input type="password" name="Contraseña" class="form-control form-control-style-4" placeholder="Password">
             </div>
             <div class="dx-form-group-md">
                 <input type="submit" value="Log In" class="form-control form-control-style-4">
             </div>
             <div class="dx-form-group-md">
                 <div class="d-flex justify-content-between">
-                    <a href="javascript:;">Don't have an account?</a>
+                    <a href="javascript:;">No tienes una cuenta?</a>
                     <a href="{% url 'register' %}" style="text-decoration: underline;">Sign Up</a>
                 </div>
             </div>
