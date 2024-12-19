@@ -32,29 +32,23 @@ def home(request):
 
 @login_required(login_url='login')
 def userPost(request):
-  # User Post form with optional ImageField
-  form = UserPostForm(request.POST, request.FILES or None)
+    form = UserPostForm(request.POST or None, request.FILES or None)
 
-  if request.method == 'POST':
-    if form.is_valid():
-      # Use form.save() to create and save the object
-      image = form.cleaned_data['image']  # Access uploaded image
-      title = form.cleaned_data['title']
-      description = form.cleaned_data['description']
+    if request.method == 'POST':
+        if form.is_valid():
+            user_post = form.save(commit=False)
+            user_post.author = request.user.author  # Assuming Author is linked with the User
+            user_post.save()
 
-      # Create UserPost object with optional image using cleaned data
-      topic = UserPost.objects.create(
-          title=title, author=request.user.author, description=description, image=image
-      )
+            messages.success(request, "Post created successfully!")
+            return redirect('home')
+        else:
+            for field, errors in form.errors.items():
+                for error in errors:
+                    messages.error(request, f"{field}: {error}")
 
-      return redirect('home')
-    else:
-      for error, error_list in form.errors.items():
-        for message in error_list:
-          messages.error(request, f"{error}: {message}")
-
-  context = {'form': form}
-  return render(request, 'user-post.html', context)
+    context = {'form': form}
+    return render(request, 'user-post.html', context)
 
 #@login_required(login_url='login')
 def postTopic(request, pk):

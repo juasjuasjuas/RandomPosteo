@@ -15,7 +15,7 @@ class UserPostForm(forms.ModelForm):
         'cols': '80',
     }))
 
-    image = forms.ImageField(label="Image (Optional)", required=False)  # Add ImageField
+    image = forms.ImageField(label="Image", required=False)  # Add ImageField
 
     class Meta:
         model = UserPost
